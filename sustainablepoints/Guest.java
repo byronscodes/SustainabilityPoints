@@ -1,4 +1,5 @@
 package sustainablepoints;
+import java.util.Scanner;
 
 public class Guest
 {
@@ -26,6 +27,28 @@ public class Guest
         this.totalNights = nights;
     }//end constructor
 
+    /**
+     * this method to calculate the total nights the cusomer have
+     * @return
+     */
+    public int nightStayed()
+    {
+        //create a scanner object
+        @SuppressWarnings("resource")
+        Scanner input = new Scanner(System.in);
+        
+        //old nights
+        System.out.println("Enter the number of nights stayes previously");
+        int oldNights = input.nextInt();
+
+        //newNights
+        System.out.println("Enter the nights for the current visit");
+        int newNights = input.nextInt();
+
+        totalNights = (oldNights + newNights);
+        return totalNights;
+    }
+    
     /**
      * this method to determine the status of the tear
      * @param totalNights the customer has so far
@@ -68,5 +91,4 @@ public class Guest
         }
         return false;
     }
-
 }
