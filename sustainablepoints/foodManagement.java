@@ -1,5 +1,5 @@
 package sustainablepoints;
-// import java.util.Scanner;
+import java.util.Scanner;
 
 /**
  * this class to handle food waste calculation and points for it
