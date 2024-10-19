@@ -15,7 +15,7 @@ public class houseKeeping {
      * this method to check if the customer wants the room to be cleaned or not
      * @return true if wants
      */
-    public boolean wantClean()
+    public boolean wantAClean()
     {
         @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
@@ -29,5 +29,5 @@ public class houseKeeping {
         }
         return false;
     }
-
+    
 }
