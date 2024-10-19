@@ -44,10 +44,10 @@ public class foodManagement
      * @param breakfastWaste the percentage of waste in breakfast
      * @return the points earned for breakfast
      */
-    public int breakfastpointsCalc(int breakfastWaste)
-    {
-        if (breakfastWaste >= )
-    }
+    // public int breakfastpointsCalc(int breakfastWaste)
+    // {
+    //     if (breakfastWaste >= )
+    // }
 
     /**
      * this method to read the user input about the waste for breakfast
@@ -64,10 +64,10 @@ public class foodManagement
         return lunchtWaste;
     }
 
-    public int lunchPointsCalc(int lunchtWaste)
-    {
+    // public int lunchPointsCalc(int lunchtWaste)
+    // {
 
-    }
+    // }
 
     /**
      * this method to read the user input about the waste for breakfast
@@ -84,8 +84,8 @@ public class foodManagement
         return dinnerWaste;
     }
 
-    public int dinnerPointsCalc(int dinnerWaste)
-    {
+    // public int dinnerPointsCalc(int dinnerWaste)
+    // {
         
-    }
+    // }
 }
