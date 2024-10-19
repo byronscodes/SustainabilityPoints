@@ -1,10 +1,17 @@
+package sustainablepoints;
+import java.util.Scanner;
 
 public class waterConsumption {
-    public double totalWaterConsumed;
-    public double averageWaterConsumption;
+    public double totalWaterCon;
+    public double singleAvgWaterCon;
+    public double averageWaterCon;
     public double waterConDifference;
+    Scanner scanner = new Scanner(System.in);
 
-    public waterCosumption(int guestsPerRoom) {
-
+    public waterCosumption(int guestsPerRoom, double singleAvgWaterCon) {
+        this.singleAvgWaterCon = singleAvgWaterCon;
+        averageWaterCon = singleAvgWaterCon*guestsPerRoom;
+        totalWaterCon = scanner.nextDouble();
+        waterConDifference = totalWaterCon - averageWaterCon;
     }
 }
