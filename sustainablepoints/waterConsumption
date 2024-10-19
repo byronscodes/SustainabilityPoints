@@ -8,10 +8,13 @@ public class waterConsumption {
     public double waterConDifference;
     Scanner scanner = new Scanner(System.in);
 
-    public waterCosumption(int guestsPerRoom, double singleAvgWaterCon) {
+    /**
+     * the constructor for this class
+     */
+    public waterConsumption(int guestsPerRoom, double singleAvgWaterCon) {
         this.singleAvgWaterCon = singleAvgWaterCon;
         averageWaterCon = singleAvgWaterCon*guestsPerRoom;
         totalWaterCon = scanner.nextDouble();
-        waterConDifference = totalWaterCon - averageWaterCon;
+        waterConDifference = (totalWaterCon - averageWaterCon) / averageWaterCon;
     }
 }

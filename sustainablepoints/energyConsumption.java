@@ -12,6 +12,6 @@ public class energyConsumption {
         this.singleAvgEnergyCon = singleAvgEnergyCon;
         averageEnergyCon = singleAvgEnergyCon*guestsPerRoom;
         totalEnergyCon = scanner.nextDouble();
-        energyConDifference = totalEnergyCon - averageEnergyCon;
+        energyConDifference = (totalEnergyCon - averageEnergyCon) / averageEnergyCon;
     }
 }
