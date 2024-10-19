@@ -56,23 +56,27 @@ public class Guest
      */
     public String loyaltyTier(int totalNights)
     {
-        if((totalNights >= 0) && (totalNights <= 10))
+        if ((totalNights >= 0) && (totalNights < 10))
+        {
+            return "Base";
+        }
+        else if ((totalNights >= 10) && (totalNights < 25))
         {
             return "Silver Elite";
         }
-        else if ((totalNights > 10) && (totalNights <= 25))
+        else if ((totalNights >= 25) && (totalNights < 50))
         {
             return "Gold Elite";
         }
-        else if((totalNights > 25) && (totalNights <= 50))
+        else if((totalNights >= 50) && (totalNights < 75))
         {
             return "Platinum Elite";
         }
-        else if((totalNights > 50) && (totalNights <= 75))
+        else if((totalNights >= 75) && (totalNights < 100))
         {
             return "Titanium Elite";
         }
-        else if((totalNights > 75) && (totalNights <= 100))
+        else if(totalNights >= 100)
         {
             return "Ambassador Elite";
         }
