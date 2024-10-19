@@ -20,8 +20,8 @@ public class loyaltyPointConverter {
      * @param foodConDifference the difference in food waste from the average
      * @return sustainability score
      */
-    public double calcSustainScore(double waterConDifference, double energyConDifference, double foodConDifference) {
-        
+    public double calcSustainScore(double waterScore, double energyScore, double foodScore) {
+        sustainabilityScore = waterScore*0.35 + energyScore*0.2 + foodScore*0.45;
         return sustainabilityScore;
     }
 
