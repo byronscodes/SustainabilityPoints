@@ -16,7 +16,15 @@ public class energyConsumption {
     public energyConsumption(int guestsPerRoom, double singleAvgEnergyCon) {
         this.singleAvgEnergyCon = singleAvgEnergyCon;
         this.averageEnergyCon = singleAvgEnergyCon*guestsPerRoom;
-        this.totalEnergyCon = scanner.nextDouble();
-        this.energyScore = 1 - ((totalEnergyCon - averageEnergyCon*0.8) / (averageEnergyCon*1.2));
+    }
+
+    /**
+     * calculates the energy score 
+     */
+    public double calcWaterScore() {
+        System.out.println("What was the total watts of water consumed for the room today?");
+        totalEnergyCon = scanner.nextDouble();
+        energyScore = 1 - ((totalEnergyCon - averageEnergyCon*0.8) / (averageEnergyCon*1.2));
+        return energyScore;
     }
 }
