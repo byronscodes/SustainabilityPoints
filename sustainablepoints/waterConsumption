@@ -5,16 +5,18 @@ public class waterConsumption {
     public double totalWaterCon;
     public double singleAvgWaterCon;
     public double averageWaterCon;
-    public double waterConDifference;
+    public double waterScore;
     Scanner scanner = new Scanner(System.in);
 
     /**
      * the constructor for this class
+     * @param guestsPerRoom the number of guests in the room
+     * @param singleAvgWaterCon the average water consumption of a single guest
      */
     public waterConsumption(int guestsPerRoom, double singleAvgWaterCon) {
         this.singleAvgWaterCon = singleAvgWaterCon;
-        averageWaterCon = singleAvgWaterCon*guestsPerRoom;
-        totalWaterCon = scanner.nextDouble();
-        waterConDifference = (totalWaterCon - averageWaterCon) / averageWaterCon;
+        this.averageWaterCon = singleAvgWaterCon*guestsPerRoom;
+        this.totalWaterCon = scanner.nextDouble();
+        this.waterScore = 1 - ((totalWaterCon - averageWaterCon*0.8) / (averageWaterCon*1.2));
     }
 }
