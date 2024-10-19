@@ -17,11 +17,11 @@ public class loyaltyPointConverter {
      * calculates the sustainability score from the sum of all sustainable actions
      * @param waterScore
      * @param energyScore
-     * @param foodScore
+     * @param housekeepingScore
      * @return sustainability score
      */
-    public double calcSustainScore(double waterScore, double energyScore, double foodScore) {
-        sustainabilityScore = waterScore*0.35 + energyScore*0.2 + foodScore*0.45;
+    public double calcSustainScore(double waterScore, double energyScore, double housekeepingScore) {
+        sustainabilityScore = waterScore*0.3 + energyScore*0.2 + housekeepingScore*0.5;
         return sustainabilityScore;
     }
 
@@ -60,18 +60,5 @@ public class loyaltyPointConverter {
             default:
                 return loyaltyPointsEarned;
         }
-    }
-
-    /**
-     * adds the loyalty points earned to account
-     * @param name name of the account that earned the points
-     * @return true if loyalty points were added, false if not
-     */
-    public boolean addPointsToAccount(String name) {
-        if (loyaltyPointsEarned == 0) {
-            return false;
-        }
-
-        return true;
     }
 }

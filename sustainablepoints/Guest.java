@@ -50,11 +50,11 @@ public class Guest
     }
     
     /**
-     * this method to determine the status of the tear
+     * this method to determine the status of the tier
      * @param totalNights the customer has so far
      * @return the status or error message if not found
      */
-    public String loyaltyTear(int totalNights)
+    public String loyaltyTier(int totalNights)
     {
         if((totalNights >= 0) && (totalNights <= 10))
         {
