@@ -15,9 +15,9 @@ public class loyaltyPointConverter {
 
     /**
      * calculates the sustainability score from the sum of all sustainable actions
-     * @param waterConDifference the difference in water consumption from the average
-     * @param energyConDifference the difference in energy consumption from the average
-     * @param foodConDifference the difference in food waste from the average
+     * @param waterScore
+     * @param energyScore
+     * @param foodScore
      * @return sustainability score
      */
     public double calcSustainScore(double waterScore, double energyScore, double foodScore) {
