@@ -1,0 +1,10 @@
+
+public class waterConsumption {
+    public double totalWaterConsumed;
+    public double averageWaterConsumption;
+    public double waterConDifference;
+
+    public waterCosumption(int guestsPerRoom) {
+
+    }
+}
