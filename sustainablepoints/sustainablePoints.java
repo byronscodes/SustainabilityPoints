@@ -8,7 +8,7 @@ public class sustainablePoints {
         int visitPoints = 0;
 
         for (int i = 1; i <= guest1.newNights; i++) {
-            System.out.println("<-------------------DAY " + i + "------------------->\n");
+            System.out.println("\n<-------------------DAY " + i + "------------------->\n");
             energyConsumption guest1Energy = new energyConsumption(1, 200);
             double guest1EnergyScore = guest1Energy.calcEnergyScore();
         
@@ -22,7 +22,7 @@ public class sustainablePoints {
             double guest1SustainScore = guest1Converter.calcSustainScore(guest1WaterScore, guest1EnergyScore, guest1houseKeepingScore);
             guest1.totalLoyaltyPoints += guest1Converter.convertToPoints(guest1SustainScore);
             visitPoints += guest1Converter.convertToPoints(guest1SustainScore);
-            System.out.println(guest1Converter.convertToPoints(guest1SustainScore) + " loyalty points earned.\n");
+            System.out.println("\n" + guest1Converter.convertToPoints(guest1SustainScore) + " loyalty points earned!\n");
         }
 
         System.out.println("Total points in account: " + guest1.totalLoyaltyPoints);
