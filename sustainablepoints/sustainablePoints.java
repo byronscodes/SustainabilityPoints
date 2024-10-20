@@ -32,6 +32,7 @@ public class sustainablePoints {
             int points = guest1Converter.convertToPoints(guest1SustainScore);
             guest1.totalLoyaltyPoints += points;
             visitPoints += points;
+            System.out.printf("\nYour sustainability score for today is %.2f out of 100", guest1Converter.sustainabilityScore);
             if (points == 0) {
                 System.out.println("\nNo points earned today.");
             }
@@ -42,6 +43,6 @@ public class sustainablePoints {
 
         System.out.println("\n<-----------------STAY ENDED---------------->\n");
         System.out.println("Total points in account: " + guest1.totalLoyaltyPoints);
-        System.out.println("Points earned from trip: " + visitPoints + "\n");
+        System.out.println("Eco-points earned from trip: " + visitPoints + "\n");
     }
 }
