@@ -23,7 +23,7 @@ public class houseKeeping {
 
         String answer = input.nextLine();
 
-        if(answer.equals("yes"))
+        if(answer.toLowerCase().equals("yes"))
         {
             return 0;
         }

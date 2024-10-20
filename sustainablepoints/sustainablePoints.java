@@ -33,14 +33,15 @@ public class sustainablePoints {
             guest1.totalLoyaltyPoints += points;
             visitPoints += points;
             if (points == 0) {
-                System.out.println("No points earned today.");
+                System.out.println("\nNo points earned today.");
             }
             else {
-                System.out.println("\n" + points + " loyalty points earned!\n");
+                System.out.println("\n" + points + " loyalty points earned!");
             }
         }
 
+        System.out.println("\n<-----------------STAY ENDED---------------->\n");
         System.out.println("Total points in account: " + guest1.totalLoyaltyPoints);
-        System.out.println("Points earned from trip: " + visitPoints);
+        System.out.println("Points earned from trip: " + visitPoints + "\n");
     }
 }

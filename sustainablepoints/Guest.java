@@ -39,7 +39,7 @@ public class Guest
         Scanner input = new Scanner(System.in);
         
         //old nights
-        System.out.println("Enter the number of nights you have stayed in the previous calendar year: ");
+        System.out.println("Enter the number of nights you have stayed in the current calendar year: ");
         int oldNights = input.nextInt();
         while (oldNights < 0 || oldNights > 365) {
             System.out.println("Invalid entry, try again: ");
@@ -49,7 +49,7 @@ public class Guest
         //newNights
         System.out.println("Enter the number of nights for the current visit: ");
         newNights = input.nextInt();
-        while (newNights < 0 || newNights > 365 || newNights + oldNights > 365) {
+        while (newNights < 1 || newNights > 365 || newNights + oldNights > 365) {
             System.out.println("Invalid entry, try again: ");
             newNights = input.nextInt();
         }
