@@ -15,19 +15,19 @@ public class houseKeeping {
      * this method to check if the customer wants the room to be cleaned or not
      * @return true if wants
      */
-    public boolean wantAClean()
+    public int wantAClean()
     {
         @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
-        System.out.println("Do you want your room to be cleaned?");
+        System.out.println("Do you want your room to be cleaned? (yes, no)");
 
         String answer = input.nextLine();
 
-        if(answer == "Yes")
+        if(answer.equals("yes"))
         {
-            return true;
+            return 1;
         }
-        return false;
+        return 0;
     }
     
 }

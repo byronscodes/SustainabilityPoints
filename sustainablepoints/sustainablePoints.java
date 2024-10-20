@@ -10,9 +10,12 @@ public class sustainablePoints {
         
         waterConsumption guest1Water = new waterConsumption(1, 10);
         double guest1WaterScore = guest1Water.calcWaterScore();
+
+        houseKeeping guest1HouseKeeping = new houseKeeping();
+        int guest1houseKeepingScore = guest1HouseKeeping.wantAClean();
         
         loyaltyPointConverter guest1Converter = new loyaltyPointConverter(guest1.loyaltyTier(0));
-        double guest1SustainScore = guest1Converter.calcSustainScore(guest1WaterScore, guest1EnergyScore, 0);
+        double guest1SustainScore = guest1Converter.calcSustainScore(guest1WaterScore, guest1EnergyScore, guest1houseKeepingScore);
         System.out.println(guest1Converter.convertToPoints(guest1SustainScore) + " loyalty points earned.");
 
     }
