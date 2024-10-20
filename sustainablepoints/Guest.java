@@ -8,6 +8,8 @@ public class Guest
     public int guestsPerRoom;
     public boolean loyaltyMember;
     public int totalNights;
+    public int newNights;
+    public int totalLoyaltyPoints;
     
     
     /**
@@ -25,6 +27,7 @@ public class Guest
         this.guestsPerRoom = guestNum;
         this.loyaltyMember = member;
         this.totalNights = nights;
+        this.totalLoyaltyPoints = 0;
     }//end constructor
 
     /**
@@ -43,7 +46,7 @@ public class Guest
 
         //newNights
         System.out.println("Enter the nights for the current visit");
-        int newNights = input.nextInt();
+        newNights = input.nextInt();
 
         totalNights = (oldNights + newNights);
         return totalNights;
