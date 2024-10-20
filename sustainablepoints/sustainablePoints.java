@@ -2,7 +2,7 @@ package sustainablepoints;
 
 public class sustainablePoints {
     public static void main(String[] args) {
-        Guest guest1 = new Guest("Byron", 126, 1, false,  0, 1123);
+        Guest guest1 = new Guest("Byron", 126, 1,  0, 1123);
         System.out.println("\nHello " + guest1.name + "!\n");
         guest1.nightStayed();
         int visitPoints = 0;

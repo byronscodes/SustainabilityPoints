@@ -33,22 +33,22 @@ public class loyaltyPointConverter {
      */
     public int convertToPoints(double sustainabilityScore) {
         if (sustainabilityScore > 90) {
-            loyaltyPointsEarned = 1000;
-        }
-        else if (sustainabilityScore > 80) {
-            loyaltyPointsEarned = 800;
-        }
-        else if (sustainabilityScore > 70) {
-            loyaltyPointsEarned = 700;
-        }
-        else if (sustainabilityScore > 60) {
-            loyaltyPointsEarned = 600;
-        }
-        else if (sustainabilityScore > 50) {
             loyaltyPointsEarned = 500;
         }
+        else if (sustainabilityScore > 80) {
+            loyaltyPointsEarned = 400;
+        }
+        else if (sustainabilityScore > 70) {
+            loyaltyPointsEarned = 300;
+        }
+        else if (sustainabilityScore > 60) {
+            loyaltyPointsEarned = 200;
+        }
+        else if (sustainabilityScore > 50) {
+            loyaltyPointsEarned = 100;
+        }
         else if (sustainabilityScore > 30) {
-            loyaltyPointsEarned = 250;
+            loyaltyPointsEarned = 50;
         }
         else {
             loyaltyPointsEarned = 0;

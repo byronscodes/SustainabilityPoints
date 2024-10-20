@@ -6,7 +6,6 @@ public class Guest
     public String name;
     public int roomNum;
     public int guestsPerRoom;
-    public boolean loyaltyMember;
     public int totalNights;
     public int newNights;
     public int totalLoyaltyPoints;
@@ -20,12 +19,11 @@ public class Guest
      * @param member loyalty member or not
      * @param nights total nights the customer have
      */
-    public Guest(String name, int num, int guestNum, boolean member, int nights, int loyaltyPoints)
+    public Guest(String name, int num, int guestNum, int nights, int loyaltyPoints)
     {
         this.name = name;
         this.roomNum = num;
         this.guestsPerRoom = guestNum;
-        this.loyaltyMember = member;
         this.totalNights = nights;
         this.totalLoyaltyPoints = loyaltyPoints;
     }//end constructor
@@ -92,18 +90,5 @@ public class Guest
             return "Ambassador Elite";
         }
         return "invalid entry";
-    }
-
-    /**
-     * this method to determine if the guest is loyal member or not
-     * @return true if they are
-     */
-    public boolean isLoyaltyMember()
-    {
-        if(loyaltyMember)
-        {
-            return true;
-        }
-        return false;
     }
 }
