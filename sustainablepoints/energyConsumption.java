@@ -24,7 +24,17 @@ public class energyConsumption {
     public double calcEnergyScore() {
         System.out.println("What was the total watts of energy consumed for the room today?");
         totalEnergyCon = scanner.nextDouble();
+        while (totalEnergyCon < 0) {
+            System.out.println("Invalid entry, try again: ");
+            totalEnergyCon = scanner.nextDouble();
+        }
         energyScore = 1 - ((totalEnergyCon - averageEnergyCon*0.8) / (averageEnergyCon*1.2));
+        if (energyScore > 1) {
+            return energyScore = 1;
+        }
+        else if (energyScore < 0) {
+            return energyScore = 0;
+        }
         return energyScore;
     }
 }

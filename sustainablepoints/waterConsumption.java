@@ -25,7 +25,17 @@ public class waterConsumption {
     public double calcWaterScore() {
         System.out.println("What was the total gallons of water consumed for the room today?");
         totalWaterCon = scanner.nextDouble();
+        while (totalWaterCon < 0) {
+            System.out.println("Invalid entry, try again: ");
+            totalWaterCon = scanner.nextDouble();
+        }
         waterScore = 1 - ((totalWaterCon - averageWaterCon*0.8) / (averageWaterCon*1.2));
+        if (waterScore > 1) {
+            return waterScore = 1;
+        }
+        else if (waterScore < 0) {
+            return waterScore = 0;
+        }
         return waterScore;
     }
 }
