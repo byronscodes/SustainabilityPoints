@@ -39,7 +39,7 @@ public class Guest
         Scanner input = new Scanner(System.in);
         
         //old nights
-        System.out.println("Enter the number of nights stayes in the previous calendar year: ");
+        System.out.println("Enter the number of nights stayed in the previous calendar year: ");
         int oldNights = input.nextInt();
         while (oldNights < 0 || oldNights > 365) {
             System.out.println("Invalid entry, try again: ");
