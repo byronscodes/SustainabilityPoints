@@ -20,14 +20,14 @@ public class Guest
      * @param member loyalty member or not
      * @param nights total nights the customer have
      */
-    public Guest(String name, int num, int guestNum, boolean member, int nights)
+    public Guest(String name, int num, int guestNum, boolean member, int nights, int loyaltyPoints)
     {
         this.name = name;
         this.roomNum = num;
         this.guestsPerRoom = guestNum;
         this.loyaltyMember = member;
         this.totalNights = nights;
-        this.totalLoyaltyPoints = 0;
+        this.totalLoyaltyPoints = loyaltyPoints;
     }//end constructor
 
     /**

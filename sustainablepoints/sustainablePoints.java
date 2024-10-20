@@ -2,10 +2,13 @@ package sustainablepoints;
 
 public class sustainablePoints {
     public static void main(String[] args) {
-        Guest guest1 = new Guest("Byron", 126, 1, false,  0);
+        Guest guest1 = new Guest("Byron", 126, 1, false,  0, 0);
+        System.out.println("Hello " + guest1.name + "!");
         guest1.nightStayed();
+        int visitPoints = 0;
+
         for (int i = 1; i <= guest1.newNights; i++) {
-            System.out.println("<-------------DAY " + i + "------------->");
+            System.out.println("<-------------DAY " + i + "------------->\n");
             energyConsumption guest1Energy = new energyConsumption(1, 200);
             double guest1EnergyScore = guest1Energy.calcEnergyScore();
         
@@ -18,7 +21,11 @@ public class sustainablePoints {
             loyaltyPointConverter guest1Converter = new loyaltyPointConverter(guest1.loyaltyTier(guest1.totalNights));
             double guest1SustainScore = guest1Converter.calcSustainScore(guest1WaterScore, guest1EnergyScore, guest1houseKeepingScore);
             guest1.totalLoyaltyPoints += guest1Converter.convertToPoints(guest1SustainScore);
-            System.out.println(guest1Converter.convertToPoints(guest1SustainScore) + " loyalty points earned.");
+            visitPoints += guest1Converter.convertToPoints(guest1SustainScore);
+            System.out.println(guest1Converter.convertToPoints(guest1SustainScore) + " loyalty points earned.\n");
         }
+
+        System.out.println("Total points in account: " + guest1.totalLoyaltyPoints);
+        System.out.println("Points earned from trip: " + visitPoints);
     }
 }
