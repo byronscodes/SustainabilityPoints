@@ -22,7 +22,7 @@ public class energyConsumption {
      * calculates the energy score 
      */
     public double calcEnergyScore() {
-        System.out.println("What was the total watts of energy consumed for the room today?");
+        System.out.println("What was the total kBTU of electricity consumed for the room today?");
         totalEnergyCon = scanner.nextDouble();
         while (totalEnergyCon < 0) {
             System.out.println("Invalid entry, try again: ");

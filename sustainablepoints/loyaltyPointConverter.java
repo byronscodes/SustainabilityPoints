@@ -1,4 +1,5 @@
 package sustainablepoints;
+import java.lang.Math;
 
 public class loyaltyPointConverter {
     public int loyaltyPointsEarned;
@@ -21,7 +22,7 @@ public class loyaltyPointConverter {
      * @return sustainability score
      */
     public double calcSustainScore(double waterScore, double energyScore, double housekeepingScore) {
-        sustainabilityScore = waterScore*0.3 + energyScore*0.2 + housekeepingScore*0.5;
+        sustainabilityScore = waterScore*30 + energyScore*20 + housekeepingScore*50;
         return sustainabilityScore;
     }
 
@@ -32,13 +33,22 @@ public class loyaltyPointConverter {
      */
     public int convertToPoints(double sustainabilityScore) {
         if (sustainabilityScore > 90) {
-            loyaltyPointsEarned = 100;
+            loyaltyPointsEarned = 1000;
         }
-        else if (sustainabilityScore > 75) {
-            loyaltyPointsEarned = 50;
+        else if (sustainabilityScore > 80) {
+            loyaltyPointsEarned = 800;
+        }
+        else if (sustainabilityScore > 70) {
+            loyaltyPointsEarned = 700;
+        }
+        else if (sustainabilityScore > 60) {
+            loyaltyPointsEarned = 600;
         }
         else if (sustainabilityScore > 50) {
-            loyaltyPointsEarned = 25;
+            loyaltyPointsEarned = 500;
+        }
+        else if (sustainabilityScore > 30) {
+            loyaltyPointsEarned = 250;
         }
         else {
             loyaltyPointsEarned = 0;
@@ -48,15 +58,15 @@ public class loyaltyPointConverter {
             case "Base":
                 return loyaltyPointsEarned;
             case "Silver Elite":
-                return loyaltyPointsEarned *= 1.1;
+                return (int) Math.round(loyaltyPointsEarned*1.1);
             case "Gold Elite":
-                return loyaltyPointsEarned *= 1.25;
+                return (int) Math.round(loyaltyPointsEarned*1.25);
             case "Plantinum Elite":
-                return loyaltyPointsEarned *= 1.5;
+                return (int) Math.round(loyaltyPointsEarned*1.5);
             case "Titanium Elite":
-                return loyaltyPointsEarned *= 1.75;
+                return (int) Math.round(loyaltyPointsEarned*1.75);
             case "Ambassador Elite":
-                return loyaltyPointsEarned *= 1.75;
+                return (int) Math.round(loyaltyPointsEarned*1.75);
             default:
                 return loyaltyPointsEarned;
         }
