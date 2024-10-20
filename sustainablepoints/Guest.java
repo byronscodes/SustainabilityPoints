@@ -43,10 +43,18 @@ public class Guest
         //old nights
         System.out.println("Enter the number of nights stayes previously");
         int oldNights = input.nextInt();
+        while (oldNights < 0 || oldNights > 365) {
+            System.out.println("Invalid entry, try again: ");
+            oldNights = input.nextInt();
+        }
 
         //newNights
         System.out.println("Enter the nights for the current visit");
         newNights = input.nextInt();
+        while (newNights < 0 || newNights > 365 || newNights + oldNights > 365) {
+            System.out.println("Invalid entry, try again: ");
+            newNights = input.nextInt();
+        }
 
         totalNights = (oldNights + newNights);
         return totalNights;

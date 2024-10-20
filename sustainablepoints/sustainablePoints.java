@@ -2,13 +2,13 @@ package sustainablepoints;
 
 public class sustainablePoints {
     public static void main(String[] args) {
-        Guest guest1 = new Guest("Byron", 126, 1, false,  0, 0);
-        System.out.println("Hello " + guest1.name + "!");
+        Guest guest1 = new Guest("Byron", 126, 1, false,  0, 1123);
+        System.out.println("\nHello " + guest1.name + "!\n");
         guest1.nightStayed();
         int visitPoints = 0;
 
         for (int i = 1; i <= guest1.newNights; i++) {
-            System.out.println("<-------------DAY " + i + "------------->\n");
+            System.out.println("<-------------------DAY " + i + "------------------->\n");
             energyConsumption guest1Energy = new energyConsumption(1, 200);
             double guest1EnergyScore = guest1Energy.calcEnergyScore();
         
